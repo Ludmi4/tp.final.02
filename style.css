@@ -1,0 +1,272 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(img/estrellado.jpg);
+   
+}  
+ #nav{
+    
+    display: block;
+    scroll-margin-inline: 0%;
+    margin-top: auto;
+     border-radius: 20px;
+   
+}
+.logo{
+   width: 330px;
+  float: left;
+  text-align: center;
+ 
+}
+
+.personajes-cantidad{
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Caveat', cursive;
+    color: aliceblue;
+}
+#nav li{
+    list-style: none;
+    font-size: 35px;
+    display: flex;
+    max-width: 100%;
+    padding: 1.5%;
+    margin: 0%;
+    font-family: 'Caveat', cursive;
+    color: aliceblue;
+}
+#nav li:hover{
+    color: rgb(5, 201, 119);
+  font-size: 2.8rem;
+  text-shadow:
+    -1px -1px 3px #047465,
+    0 0 1px rgb(0, 0, 0),
+    1px 1px 1px rgb(9, 10, 10),
+    2px 2px 1px #106e6a,
+    3px 3px 1px #078159,
+    4px 4px 4px #065f53; 
+    
+}
+#nav li,ul{
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+}
+.filtros {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+   
+   justify-content: flex-end;
+}
+.filtros li{
+    font-size: 18px;
+    margin: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 550px;
+    justify-content: space-between;
+    margin-top: 60px;
+    border-radius: 50px ;
+    --borderWidth: 4px;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+
+.card:after { 
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #0f0f0f, #0b5c3a, #212727, #04857a, #535b72, #053104);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  /* aniamacion del borde */
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+.card:hover { /* sombra de la tarjeta*/
+
+    transform: translateY(-15px);
+     transition: 1s ease;
+    box-shadow: 10px  8px 15px 10px rgba(128, 125, 125, 0.795);
+    cursor: pointer;
+
+}
+
+.card-content {
+    height: 400px;
+    padding: 2px 5px 10px 10px;
+    background-color: #000000f8;
+    color: aliceblue;
+    font-family: 'Pangolin', cursiva;
+    
+
+}
+
+.card-image img {
+    display: block;
+    height: 250px;
+    
+  
+
+}
+
+.card-image {
+    overflow: hidden;
+   
+    
+}
+
+.card-info a{
+   text-decoration: none;
+   justify-content: center;
+  
+}
+.link{
+    display: flex;
+    color: #030303;
+    text-align: center;
+}
+
+.card-image:hover img {
+    transform: scale(1.3);
+    transition-duration: 0.5s;
+    filter: grayscale(90%); 
+ }
+
+ #raiz { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+ }
+
+#footer {
+    height: 200px;
+    width: 100%;
+    background-image: url(img/footer.jpg) /*url(pxfuel.jpg) */;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+#footer img{
+     height: 55px;
+     width: 50;
+     margin-inline: 90px;
+    
+      
+}
+#footer img:hover{
+    background: linear-gradient(rgb(4, 87, 80), rgb(27, 65, 44));
+}
+.derechos {
+    font-size: 20px;
+    color: aliceblue;
+    display: flex;
+   justify-content: flex-end;
+}
+
+.pagination { 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+       margin: 30px;
+        gap: 10px;
+}
+.pagination img{
+    height: 40px;
+   transition: transform .3s;
+}
+.pagination img:hover{
+ cursor: pointer;
+  transform: scale(1.2);
+}
+button{
+    outline: none;
+    background-color: #095e59;
+}
+
+
+.container-paginador {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+    color: aliceblue;
+}
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+   #nav ul li{
+     font-size: 15px;
+     display: flex;
+     position: relative;
+     margin-top: 150px;
+   }
+   #nav{
+    background-image: url(img/logo.75509f2e.png);
+    background-size: auto;
+   }
+
+   #nav li:hover{
+    color: rgb(5, 201, 119);
+  font-size: 1.2rem;
+  text-shadow:
+    -1px -1px 3px #047465,
+    0 0 1px rgb(0, 0, 0),
+    1px 1px 1px rgb(9, 10, 10),
+    2px 2px 1px #42a047,
+    3px 3px 1px #078159,
+    4px 4px 1px #01e96a; 
+    
+}
+   .logo{
+    display: none;
+   
+   }
+   #footer{
+    background-image: url(img/pxfuel.jpg);
+    background-size:contain;
+    height: 100%;
+   }
+   #footer img{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+   }
+
+   .card{
+      display: flex;
+      flex-direction: column;
+      margin-inline: 30px;
+   }
+}
